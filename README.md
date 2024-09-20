@@ -49,15 +49,17 @@ df.drop('duration', axis=1, inplace=True) # duration은 사후에 기록된 컬�
 df.info()
 ```
 
-![image2](https://github.com/user-attachments/assets/6f633016-88ef-42ae-bf92-de01bd754aac)
-
-![image3](https://github.com/user-attachments/assets/71e59feb-3466-4e19-85eb-c81977d57031)
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/6f633016-88ef-42ae-bf92-de01bd754aac" width="400"/></td>
+    <td><img src="https://github.com/user-attachments/assets/71e59feb-3466-4e19-85eb-c81977d57031" width="400"/></td>
+  </tr>
+</table>
 
 
 - 결측값 없음
 - 총 데이터 11162개
 - y값 분포여부 확인
-
 ---
 
 ## autoML사용을 위한 setup
@@ -102,70 +104,9 @@ for model in tuned_top5: # 각 모델에 대해 feature 중요도 시각화 수�
     plt.show()
 ```
 
-- LGBMClassifier
 
-- feature_importance
+<table> <tr> <td>LGBMClassifier</td> <td>feature_importance</td> </tr> <tr> <td><img src="https://github.com/user-attachments/assets/dd1e5dba-86f7-48d0-84f8-ef84c3c5c556" width="400"/></td> <td><img src="https://github.com/user-attachments/assets/7f6c3a17-c301-4e99-8440-1507ded9ae49" width="400"/></td> </tr> <tr> <td colspan="2">AUC: 0.7943 → 0.7868, REC: 0.7404 → 0.7282</td> </tr> <tr> <td>GradientBoostingClassifier</td> <td>feature_importance</td> </tr> <tr> <td><img src="https://github.com/user-attachments/assets/a78941c1-b357-4fcb-8638-7e09634a68fb" width="400"/></td> <td><img src="https://github.com/user-attachments/assets/1e160023-a0ef-43de-912a-798a67e85c05" width="400"/></td> </tr> <tr> <td colspan="2">AUC: 0.7894 → 0.7925, REC: 0.7404 → 0.7354</td> </tr> <tr> <td>XGBClassifier</td> <td>feature_importance</td> </tr> <tr> <td><img src="https://github.com/user-attachments/assets/42ba441c-d1d2-4b7b-b0c7-f2deeb1131e4" width="400"/></td> <td><img src="https://github.com/user-attachments/assets/b0b0dde1-cd5b-475a-b96d-4cbb075fb62d" width="400"/></td> </tr> <tr> <td colspan="2">AUC: 0.7843 → 0.7729, REC: 0.7272 → 0.6948</td> </tr> <tr> <td>RandomForestClassifier</td> <td>feature_importance</td> </tr> <tr> <td><img src="https://github.com/user-attachments/assets/531cfef2-2184-4bd5-ada9-3b9271ee4cb6" width="400"/></td> <td><img src="https://github.com/user-attachments/assets/49befb81-8ae5-4ae7-ba4d-31d491ab27f8" width="400"/></td> </tr> <tr> <td colspan="2">AUC: 0.7792 → 0.7579, REC: 0.7242 → 0.7044</td> </tr> <tr> <td>AdaBoostClassifier</td> <td>feature_importance</td> </tr> <tr> <td><img src="https://github.com/user-attachments/assets/59ebb8d2-86d6-49cc-842d-f9beb1973801" width="400"/></td> <td><img src="https://github.com/user-attachments/assets/41c393d1-8a14-499f-a970-06261daffae4" width="400"/></td> </tr> <tr> <td colspan="2">AUC: 0.7718 → 0.7397, REC: 0.7138 → 0.6842</td> </tr> </table>
 
-![image7](https://github.com/user-attachments/assets/dd1e5dba-86f7-48d0-84f8-ef84c3c5c556)
-
-
-![image77](https://github.com/user-attachments/assets/7f6c3a17-c301-4e99-8440-1507ded9ae49)
-
-
-- auc = 0.7943 → 0.7868
-- rec = 0.7404 → 0.7282
-
-- GradientBoostingClassifier
-
-- feature_importance
-
-![image8](https://github.com/user-attachments/assets/a78941c1-b357-4fcb-8638-7e09634a68fb)
-
-
-![image88](https://github.com/user-attachments/assets/1e160023-a0ef-43de-912a-798a67e85c05)
-
-
-- auc = 0.7894 → 0.7925
-- rec = 0.7404 → 0.7354
-
-- XGBClassifier
-
-![image9](https://github.com/user-attachments/assets/42ba441c-d1d2-4b7b-b0c7-f2deeb1131e4)
-
-
-- auc = 0.7843 → 0.7729
-- rec = 0.7272 → 0.6948
-
-- feature_importance
-
-![image99](https://github.com/user-attachments/assets/b0b0dde1-cd5b-475a-b96d-4cbb075fb62d)
-
-
-- RandomForestClassifier`
-
-![image10](https://github.com/user-attachments/assets/531cfef2-2184-4bd5-ada9-3b9271ee4cb6)
-
-
-
-- auc = 0.7792 → 0.7579
-- rec = 0.7242 → 0.7044
-
-- featdre_importance
-
-![image100](https://github.com/user-attachments/assets/49befb81-8ae5-4ae7-ba4d-31d491ab27f8)
-
-
-- AdaBoostClassifier
-
-- feature_importance
-
-![image11](https://github.com/user-attachments/assets/59ebb8d2-86d6-49cc-842d-f9beb1973801)
-
-
-- auc = 0.7718 → 0.7397
-- rec = 0.7138 → 0.6842
-
-![image111](https://github.com/user-attachments/assets/41c393d1-8a14-499f-a970-06261daffae4)
 
 
 ⇒ **하이퍼 파라미터 튜닝하니까 전반적으로 성능 떨어짐**
@@ -198,9 +139,13 @@ blender_top5 = blend_models(estimator_list=tuned_top5)
 
 ## ROC curve 및 혼동행렬 확인
 
-![image14](https://github.com/user-attachments/assets/17450fb8-9493-4dda-8879-c2b5e414811c)
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/17450fb8-9493-4dda-8879-c2b5e414811c" width="400"/></td>
+    <td><img src="https://github.com/user-attachments/assets/8f971ff4-70ed-469d-bada-7b34f2949079" width="400"/></td>
+  </tr>
+</table>
 
-![image15](https://github.com/user-attachments/assets/8f971ff4-70ed-469d-bada-7b34f2949079)
 
 - **개선사항** : 전처리 과정을 거친 모델을 돌렸는데 성능이 낮아짐 (스케일링, 인코딩)
   - 전처리 없이 모델만 학습했더니 더 높은 성능을 보임
